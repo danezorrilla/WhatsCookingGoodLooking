@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1078159801220",
+    "firebase_url": "https://whatscookinggoodlooking-aa343.firebaseio.com",
+    "project_id": "whatscookinggoodlooking-aa343",
+    "storage_bucket": "whatscookinggoodlooking-aa343.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078159801220:android:e76b5483b3ad67af1cfbd1",
+        "android_client_info": {
+          "package_name": "com.bb.whatscookinggoodlooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078159801220-amstiq07ba7ma10movefs0icu0doj93p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bb.whatscookinggoodlooking",
+            "certificate_hash": "68b33d98de8ccb33e2954b7fcefb7210b3a9136b"
+          }
+        },
+        {
+          "client_id": "1078159801220-h1ac56r0lh98l06hcgo57alu66rlsagh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc4lYBSzsOMAKTz2b-tGRLzdomgqSfzzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1078159801220-h1ac56r0lh98l06hcgo57alu66rlsagh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
