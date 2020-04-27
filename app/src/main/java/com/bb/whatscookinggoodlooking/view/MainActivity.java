@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements WCGLAdapter.Favor
             Log.d("TAG_XX", "Recipe Name: " + recipe.getHits().get(i).getRecipe().getLabel());
             searchedRecipeList.setLayoutManager(new LinearLayoutManager(this));
             searchedRecipeList.setAdapter(new WCGLAdapter(recipe, this));
+
         }
     }
 
@@ -89,5 +91,12 @@ public class MainActivity extends AppCompatActivity implements WCGLAdapter.Favor
         FavoriteRecipe newFavoriteRecipe = new FavoriteRecipe(favoriteRecipeName, favoriteRecipeImage,
                 favoriteRecipeIngredients, favoriteRecipeUrl);
         wcglViewModel.addNewFavoriteRecipe(newFavoriteRecipe);
+    }
+
+    @Override
+    public void getRecipeURL(String recipeURL) {
+        System.out.println(recipeURL);
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(recipeURL));
+        startActivity(browserIntent);
     }
 }

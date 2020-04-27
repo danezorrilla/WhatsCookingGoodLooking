@@ -1,5 +1,7 @@
 package com.bb.whatscookinggoodlooking.adapter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,7 @@ public class WCGLAdapter extends RecyclerView.Adapter<WCGLAdapter.WCGLViewHolder
 
     public interface FavoriteRecipeInterface{
         void addToFavorite(FavoriteRecipe favoriteRecipe);
+        void getRecipeURL(String recipeURL);
     }
 
     private Recipe recipe;
@@ -52,6 +55,15 @@ public class WCGLAdapter extends RecyclerView.Adapter<WCGLAdapter.WCGLViewHolder
         holder.searchedRecipeIngredients.setText(recipe.getHits().get(position).getRecipe()
                 .getIngredientLines().toString());
         holder.searchedRecipeUrl.setText(recipe.getHits().get(position).getRecipe().getUrl());
+
+        holder.searchedRecipeUrl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = holder.searchedRecipeUrl.getText().toString();
+
+                favoriteRecipeInterface.getRecipeURL(url);
+            }
+        });
 
         holder.addToFavorite.setOnClickListener(new View.OnClickListener() {
             @Override
